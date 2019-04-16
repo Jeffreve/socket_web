@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>weibo</title>
+    <style>
+        .comment {
+            border: 1px red solid;
+        }
+    </style>
+</head>
+<body>
+    <form action="/weibo/update" method="post">
+        <input type="hidden" name="id" value="{{ weibo.id }}">
+        <span>原内容：</span>
+        <input value="{{ weibo.content }}">
+        <br>
+        <span>修改处：</span>
+        <input name="content" value="{{ weibo.content }}">
+        <br>
+        <button type="submit">edit</button>
+    </form>
+</body>
+</html>

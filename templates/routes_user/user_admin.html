@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>user admin</title>
+</head>
+<body>
+    {% for u in users %}
+        <div>
+            {{ u.id }} : {{ u.username }} : {{ u.password }}
+        </div>
+    {% endfor %}
+
+    <form action="/user/admin/update" method="post">
+        <input type="text" name="id" placeholder="请输入用户名">
+        <br>
+        <input type="text" name="password" placeholder="请输入密码">
+        <br>
+        <button type="submit">admin edit</button>
+    </form>
+</body>
+</html>

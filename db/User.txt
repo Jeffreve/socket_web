@@ -1,0 +1,22 @@
+[
+  {
+    "id": 3,
+    "username": "jefd",
+    "password": "3510467e763f07bf4e0a96faaea8ae63109e20f80acc938a59ad65e484e22a50"
+  },
+  {
+    "id": 0,
+    "username": "hou",
+    "password": "dabe8fbbed00dbf72144618dfa56b6eff40207b290013639faa13ecb09f90c3b"
+  },
+  {
+    "id": 2,
+    "username": "jeff",
+    "password": "dabe8fbbed00dbf72144618dfa56b6eff40207b290013639faa13ecb09f90c3b"
+  },
+  {
+    "id": 3,
+    "username": "test",
+    "password": "dabe8fbbed00dbf72144618dfa56b6eff40207b290013639faa13ecb09f90c3b"
+  }
+]

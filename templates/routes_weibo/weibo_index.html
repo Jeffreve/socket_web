@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>weibo</title>
+    <style>
+        .cell{
+            border: 1px green solid;
+        }
+        .comment {
+            border: 1px red solid;
+        }
+    </style>
+</head>
+<body>
+    <a href="/weibo/new">写新微博</a>
+    <br>
+    <br>
+    {% for w in weibos %}
+    <div class="cell">
+        {{ w.content }} from {{ w.author() }}
+        <a href="/weibo/delete?id={{ w.id }}">删除</a>
+        <a href="/weibo/edit?id={{ w.id }}">修改</a>
+        <br>
+        <br>
+        {% for c in w.comments() %}
+        <div class="comment">
+            {{ c.author() }} : {{ c.content }}
+            <a href="/comment/edit?id={{ c.id }}">修改</a>
+            <a href="/comment/delete?id={{ c.id }}&w_id={{ c.weibo_user_id }}">删除</a>
+        </div>
+        {% endfor %}
+        <br>
+        <form action="/comment/add" method="post">
+            <input type="hidden" name="weibo_id" value="{{ w.id }}">
+            <input type="hidden" name="weibo_user_id" value="{{ w.user_id }}">
+            <input name="content">
+            <br>
+            <button type="submit">添加评论</button>
+        </form>
+    <br>
+    <br>
+    </div>
+    <br>
+    {% endfor %}
+</body>
+</html>

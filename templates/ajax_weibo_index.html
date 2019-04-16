@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>todo ajax</title>
+        <style>
+        .weibo-cell{
+            border: 1px green solid;
+            margin: 10px;
+        }
+        .comment-cell {
+            border: 1px red solid;
+            margin: 5px;
+        }
+    </style>
+
+    </head>
+    <body>
+
+        <h3>hello, {{ u.username }}</h3>
+        <span>visit id:</span>
+        <input id='id-input-visit' value="{{ author_id }}">
+        <br>
+        <span>user id:</span>
+        <input id='id-input-user' value="{{ u.id }}">
+        <br>
+        <br>
+        <input id='id-input-weibo'>
+        <button id='id-button-add'>add</button>
+        <br>
+        <br>
+        <div class="weibo-list">
+        </div>
+
+    </body>
+    <script src='/static?file=basic.js'></script>
+    <script src='/static?file=weibo.js'></script>
+    <script src='/static?file=comment.js' async></script>
+</html>
